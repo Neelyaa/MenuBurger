@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* Reset de la page */
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Variables */
+:root {
+    --font-size: 1rem;
+    --navbar-color: #FFF;
+    --navbar-bg-color: #000;
+}
+
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size);
+    cursor: url(img/iconmonstr-fast-food-3.svg), auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+}
+
+img {
+    display: flex;
+    width: 70px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 65px;
+    background: var(--navbar-bg-color);
+    cursor: auto;
+}
+
+.nav_list {
+    display: flex;
+}
+
+.nav_link {
+    padding: 0 10px;
+    position: relative;
+}
+
+.nav_link>a {
+    text-decoration: none;
+    color: var(--navbar-color);
+}
+
+/*Effet Hover Nav */
+a::after {
+    content: "";
+    width: 100%;
+    transform: scaleX(0.2);
+    transform-origin: left;
+    height: 2px;
+    transition: 250ms ease-in;
+    background-color: white;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+ul {
+    list-style: none;
+}
+
+.burger {
+    display: none;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+/* Burger en CSS */
+
+.ham {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 315px;
+}
+
+/* Sesame en CSS :
+.sesame {
+    position: absolute;
+    background: #fcf9f6;
+    height: 6px;
+    width: 16px;
+    border-radius: 100%;
+}
+    .one {
+      transform: rotate(-5deg);
+     top:33%;
+    }
+    .two {
+      transform: rotate(5deg);
+   left:48%;
+   top:34%;
+    }
+    .three {
+      transform: rotate(10deg);
+      right:47.7%;
+      top:34%;
+    }
+*/
+
+
+.painh {
+    width: 300px;
+    height: 80px;
+    /* background-color: #fca050; */
+    background: url(img/painhaut.png);
+    border-radius: 100px 100px 0 0;
+    box-shadow: 1px 0px 10px 2px black;
+}
+
+.salade {
+    /* background-color: rgb(54, 145, 54); */
+    background: url(img/salade.jpg);
+    height: 7px;
+    width: 260px;
+    border-radius: 40px;
+    box-shadow: 3px 4px 3px 3px black;
+}
+
+.tomate {
+    background: url(img/tomate.jpg);
+    /* background-color: rgb(248, 36, 36); */
+    background-size: cover;
+    background-repeat: round;
+    height: 15px;
+    width: 250px;
+    border-radius: 40px;
+    box-shadow: 3px 1px 3px 1px black;
+}
+
+.steak {
+    /* background-color: rgb(116, 38, 38); */
+    background: url(img/steak-hache2.jpg);
+    width: 270px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 7px black;
+}
+
+.painb {
+    box-shadow: 1px 4px 10px 1px black;
+    width: 300px;
+    height: 80px;
+    /* background-color: #fca050; */
+    background: url(img/painbas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 100px 100px;
+}
+
+.contact {
+    display: block;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 2mm solid black;
+    background-color: rgb(231, 230, 230);
+    box-shadow: 0px 0px 0px 8px #fc2222c2, 0px 0px 0px 16px #353535, 0px 0px 0px 24px #f0ff1bde, 0px 0px 0px 31px #0f0f0fb2, 0px 0px 0px 39px #c7c9c7, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    height: 70%;
+    width: 50%;
+}
+
+
+.us {
+    z-index: 2;
+    position: relative;
+    margin: auto;
+    padding-top: 50px;
+    width: 200px;
+    transition: transform 1s ease-out;
+}
+
+.us:hover {
+    transform: rotate(6deg);
+}
+
+.painclose {
+    z-index: 1;
+    position: absolute;
+    width: 440px;
+    right: 38%;
+    top: 105%;
+}
+
+.texte {
+    position: absolute;
+    left: 45%;
+    top: 131.1%;
+}
+
+i {
+    margin-right: 5px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.canva {
+    right: 39%;
+    top: 85%;
+    position: absolute;
+    margin: auto;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:914px) {
+    .nav_list {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: calc(100vh - 65px);
+        /*Allonge le menu sur la page entière*/
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: var(--navbar-bg-color);
+        transition: all .5s ease-in-out;
+    }
+
+    /* Place le burger a droite*/
+    .navbar {
+        justify-content: right;
+    }
+
+    /* Apparition menu */
+    .show-nav .nav_list {
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .nav_link>a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.6rem;
+        transition: all .4s ease-in-out;
+        /* <-- effet au click */
+    }
+
+    .nav_link>a:hover {
+        padding-left: 2rem;
+        letter-spacing: 5px;
+    }
+
+    /* Pour l'effet animé */
+    .nav_link {
+        transform: translateX(101%);
+    }
+
+    .show-nav .nav_link {
+        transform: translateX(0);
+    }
+
+    /* Dimmension bouton */
+    .burger {
+        display: block;
+        position: relative;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    /* Barre central du burger */
+    .bar {
+        display: block;
+        width: 45px;
+        height: 4px;
+        background: var(--navbar-color);
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    /* Croix fermeture */
+    .show-nav .bar {
+        width: 0;
+        background: transparent;
+    }
+
+    .show-nav .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .show-nav .bar::after {
+        transform: rotate(-45deg);
+    }
+
+    /* Barre du haut + bas */
+    .bar::before,
+    .bar::after {
+        content: "";
+        width: 45px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background: var(--navbar-color);
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before {
+        transform: translateY(-12px);
+    }
+
+    .bar::after {
+        transform: translateY(12px);
+    }
+
+    /* Animation ouverture menu */
+    .show-nav .first {
+        transition: all 1s ease-out;
+    }
+
+    .show-nav .second {
+        transition: all 1.1s ease-out;
+    }
+
+    .show-nav .third {
+        transition: all 1.2s ease-out;
+    }
+
+    /* .one {
+        transform: rotate(-5deg);
+       top:49%;
+      }
+      .two {
+        transform: rotate(8deg);
+     left:37%;
+     top:50%;
+      }
+      .three {
+        transform: rotate(10deg);
+        right:35%;
+        top:50%;
+      } */
+
+    .ham {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+        margin-bottom: 200px;
+    }
+
+    .contact {
+        display: block;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        font-size: 1.2rem;
+        border: 2mm solid black;
+        background-color: rgb(231, 230, 230);
+        box-shadow: 0px 0px 0px 8px #fc2222c2, 0px 0px 0px 16px #353535, 0px 0px 0px 24px #f0ff1bde, 0px 0px 0px 31px #0f0f0fb2, 0px 0px 0px 39px #c7c9c7, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        border-radius: 10%;
+        height: 70%;
+        width: 80%;
+    }
+
+    .us {
+        z-index: 2;
+        position: relative;
+        margin: auto;
+        width: 170px;
+        transition: transform 1s ease-out;
+    }
+
+  
+    .painclose {
+        z-index: 1;
+        position: absolute;
+        width: 317px;
+        right: 6%;
+        top: 123.4%;
+    }
+
+    .texte {
+        position: absolute;
+        left: 30%;
+        top: 146.7%;
+    }
+
+    p {
+        font-size: 15px;
+    }
+#myCanvas {
+width:300px;
+}  
+.canva {
+        top: 100%;
+        left:8%;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:360px) {
+    .nav_link>a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 1px;
+        color: var(--navbar-color);
+        transition: .4s;
+    }
+
+    .nav_link:hover>a::after {
+        width: 100%;
+    }
+}

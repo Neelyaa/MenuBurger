@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/0062.png_860-removebg-preview.png">
+    <title>Menu Burger</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc7fce5b23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="logo"><img src="img/0062.png_860-removebg-preview.png"></div>
+    <nav class="navbar show-nav" role="navigation" id="nav">
+        <ul class="nav_list">
+            <li class="nav_link first"><a href="#">Accueil</a></li>
+            <li class="nav_link second"><a href="#ham">Burger</a></li>
+            <li class="nav_link third"><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="burger">
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <div class="main">
+        <h1>Menu Burger Responsive</h1>
+    </div>
+
+<!-- Hamburger CSS -->
+<div class="ham" id="ham">
+    <span class="sesame one"></span>
+    <span class="sesame two"></span>
+    <span class="sesame three"></span>
+   <span class="painh"></span>
+    <span class="salade"></span>
+    <span class="tomate"></span>
+    <span class="steak"></span>
+    <span class="painb"></span>
+</div>
+
+<div class="contact" id="contact"> 
+<img src="img/contact.png" class="us" alt="contactme">
+<div class="canva">
+<canvas id="myCanvas" width="400" height="300"></canvas>
+</div>
+<img onmouseover="setNewImage()" onmouseout="setOldImage()" src="img/painH-close.png" class="painclose" id="close" >
+
+<div class="texte">
+ <p><i class="fa-solid fa-burger"></i>Nelya Nouader</p>
+<p><i class="fa-solid fa-map-pin"></i>Marseille</p>
+<p><i class="fa-solid fa-code"></i>Noob Developper</p>
+</div>
+</div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
